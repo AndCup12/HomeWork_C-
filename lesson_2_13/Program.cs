@@ -1,12 +1,16 @@
 ﻿Console.WriteLine("Введите число");
 string num = Console.ReadLine();
-int result = Convert.ToInt32(num);
+ int result = Convert.ToInt32(num);
+int div;
 
-if(result > 100){
-    char[] arr = num.ToCharArray();
-    Console.WriteLine(arr[2]);
+if(result < 100){
+    Console.WriteLine("Третьего числа нет");
 }else{
-    Console.WriteLine("Третьей цифры нет");
+    while(result > 999){
+        result /= 10;
+    }
+    div = result % 10;
+    Console.WriteLine(div); 
 }
 
 
